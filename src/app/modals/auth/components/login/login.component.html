@@ -1,0 +1,8 @@
+<form [formGroup]="authForm" (ngSubmit)="auth()">
+  <input formControlName="login" type="text">
+  <input formControlName="password" type="text">
+  <p-button label="Войти" type="submit" class="form__submit_button"
+            [style]="{'width':'127px','height':'48px'}">
+  </p-button>
+  <p (click)="">Еще не зарегистрированы?</p>
+</form>

@@ -1,0 +1,7 @@
+<p-button icon="pi pi-user" label="Войти" (click)="showLogin=true" styleClass="p-button-text"
+          [style]="{'border':'none'}"></p-button>
+<p-dialog [(visible)]="showLogin" header="Авторизация" [style]="{'width':'416px','height':'400px'}"
+          [resizable]="false" [draggable]="false" [modal]="true" *ngIf="showLogin">
+  <app-login></app-login>
+
+</p-dialog>

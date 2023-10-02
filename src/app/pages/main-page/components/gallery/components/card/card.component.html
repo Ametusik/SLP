@@ -1,0 +1,7 @@
+<div class="advert">
+  <img src="assets/img/mockAdvertPhoto.jpeg">
+  <a routerLink="/advert/{{advert.id}}" [queryParams]="{'id':advert.id}" class="advert__name">{{advert.name}} </a>
+  <p class="advert__price">{{advert.cost}}$</p>
+  <p class="advert__address">{{advert.location}}</p>
+  <p class="advert__create_time">{{advert.createdAt}}</p>
+</div>
