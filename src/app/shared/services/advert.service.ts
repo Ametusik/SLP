@@ -16,9 +16,13 @@ export class AdvertService {
     let obj = {search: a, showNonActive: true}
     return this.http.post('http://194.87.237.48:5000/Advert/search', obj).pipe(map((data: any) => {
       return data.map(function (advert: Advert): Advert {
-        return new Advert(advert.id, advert.categoryId, advert.name, advert.cost, advert.phone, advert.location, advert.description, advert.img, advert.createdAt);
+        return advert;
       })
     }))
   }
+
+  /*public createAdvert(advert:Advert):Observable<Advert>{
+    let obj = {advert.categoryId}
+  }*/
 
 }

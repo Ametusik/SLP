@@ -1,7 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../../../../shared/services/auth.service";
-import {StorageService} from "../../../../shared/services/storage.service";
+import {AuthService} from "../../shared/services/auth.service";
+import {StorageService} from "../../shared/services/storage.service";
+import {PrimeIcons} from "primeng/api";
 
 @Component({
   selector: 'app-login',
@@ -10,7 +11,8 @@ import {StorageService} from "../../../../shared/services/storage.service";
 })
 export class LoginComponent {
 
-  @Input() visibleLoginModal
+  visibleModal: boolean = false;
+  canShowAlerts:boolean = false;
 
   authForm: FormGroup = new FormGroup({
     login: new FormControl('', Validators.required),
@@ -22,7 +24,7 @@ export class LoginComponent {
   }
 
 
-  auth(): void {
+  login(): void {
     let user = this.authForm.getRawValue()
     this.authService.login(user.login, user.password).subscribe({
       next: data => {
@@ -30,6 +32,10 @@ export class LoginComponent {
         window.location.reload();
       },
     })
+  }
+
+  showModal() {
+    this.visibleModal = true;
   }
 
 }

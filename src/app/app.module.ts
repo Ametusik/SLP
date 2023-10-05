@@ -8,19 +8,24 @@ import {MainPageModule} from "./pages/main-page/main-page.module";
 import { CreateAdvComponent } from './pages/create-adv/create-adv.component';
 import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { RusFormatDate } from './shared/pipes/rusFormatDate';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    CreateAdvComponent
+    CreateAdvComponent,
+    RusFormatDate
   ],
   imports: [
     BrowserModule,
     HeaderModule,
     MainPageModule,
     RouterOutlet,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
