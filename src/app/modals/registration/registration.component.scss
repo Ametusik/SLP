@@ -1,0 +1,44 @@
+button{
+  height:36px;
+  width:85px;
+  background:none;
+  border:none;
+  color:white;
+
+}
+hover{
+  p{
+    fill:red;
+  }
+}
+form, ng-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+
+  input {
+    height: 40px;
+    border: #CBD5E1 solid 1px;
+    border-radius: 4px;
+  }
+
+  /*.form__save_password {
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+    gap: 10px;
+    height: 20px;
+
+    .form__save_password__button{
+      height:13px;
+    }
+  }*/
+
+  .form__submit_button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+  }
+}

@@ -7,7 +7,7 @@ export class Advert {
     public location: string,
     public phone: string,
     public description: string|null,
-    public img: string[],
+    public imagesIds: string[],
     public createdAt:Date
   ) {
   }

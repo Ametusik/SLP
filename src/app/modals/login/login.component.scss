@@ -1,0 +1,58 @@
+button{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-around;
+  align-items:center;
+  height:36px;
+  width:85px;
+  background:none;
+  border:none;
+
+  p{
+    color:white;
+  }
+
+}
+button:hover{
+  svg,p{
+    fill:red;
+  }
+}
+form,ng-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+
+  input {
+    height: 40px;
+    border:  solid 1px;
+    border-radius: 4px;
+  }
+
+
+  /*.form__save_password {
+    display: flex;
+    flex-direction: row;
+    margin-top:10px;
+    gap: 10px;
+    height: 20px;
+
+    .form__save_password__button{
+      height:13px;
+    }
+  }*/
+
+  .alert{
+    p{
+      color:#EF4444
+    }
+  }
+
+  .form__submit_button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+  }
+}
