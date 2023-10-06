@@ -1,8 +1,9 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, RequiredValidator, Validators} from "@angular/forms";
-import {CategoryService} from "../../shared/services/category.service";
-import {AdvertService} from "../../shared/services/advert.service";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
+
+
 import {Category} from "../../shared/entities/category";
+import {CategoriesService} from "../../api/services/categories.service";
 
 @Component({
   selector: 'app-create-adv',
@@ -23,7 +24,7 @@ export class CreateAdvComponent implements OnInit {
     cost: new FormControl('', [Validators.required])
   })
 
-  constructor(private categoryService: CategoryService, private advertService: AdvertService) {
+  constructor(private categoryService: CategoriesService) {
   }
 
   ngOnInit() {

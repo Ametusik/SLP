@@ -1,6 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {AdvertService} from "../../../../shared/services/advert.service";
+
 import {Advert} from "../../../../shared/entities/advert";
+import {AdvertService} from "../../../../api/services/advert.service";
+import {ShortAdvertDto} from "../../../../api/models/short-advert-dto";
 
 @Component({
   selector: 'app-gallery',
@@ -9,13 +11,14 @@ import {Advert} from "../../../../shared/entities/advert";
 })
 export class GalleryComponent implements OnInit {
 
-  advertList: Advert[] = [];
+  advertList: ShortAdvertDto[] = [];
 
   constructor(private advertService: AdvertService) {
   }
 
   ngOnInit(): void {
-    this.advertService.getAdvertList(null).subscribe((data: Advert[]) => (this.advertList = data))
+    this.advertService.advertSearchPost$Response({body: {search: ''}})
+      .subscribe((data) => this.advertList = data.body)
   }
 
 }

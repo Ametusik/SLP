@@ -1,15 +1,16 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {HeaderModule} from "./shared/components/header/header.module";
-import { MainPageComponent } from './pages/main-page/main-page.component';
+import {MainPageComponent} from './pages/main-page/main-page.component';
 import {MainPageModule} from "./pages/main-page/main-page.module";
-import { CreateAdvComponent } from './pages/create-adv/create-adv.component';
+import {CreateAdvComponent} from './pages/create-adv/create-adv.component';
 import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import { RusFormatDate } from './shared/pipes/rusFormatDate';
+import {RusFormatDate} from './shared/pipes/rusFormatDate';
+import {ApiModule} from "./api/api.module";
 
 @NgModule({
   declarations: [
@@ -25,9 +26,11 @@ import { RusFormatDate } from './shared/pipes/rusFormatDate';
     RouterOutlet,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ApiModule.forRoot({rootUrl: 'http://194.87.237.48:5000'})
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
