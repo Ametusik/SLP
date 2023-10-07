@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewEncapsulation} from '@angular/core';
-import {CategoryService} from "../../services/category.service";
-import {Category} from "../../entities/category";
+
+import {CategoriesService} from "../../../api/services/categories.service";
 
 @Component({
   selector: 'app-header',
@@ -9,15 +9,15 @@ import {Category} from "../../entities/category";
 })
 export class HeaderComponent implements OnInit {
 
-  categories: Category[] = []
+  //categories: Category[] = []
   selectedCategory: string = ''
   search: string = ''
 
-  constructor(private categoryService: CategoryService) {
+  constructor(private categoryService: CategoriesService) {
   }
 
   ngOnInit() {
-    this.categoryService.getCategoriesList().subscribe((data: Category[]) => (this.categories = data))
+
 
 
   }

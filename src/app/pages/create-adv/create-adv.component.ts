@@ -1,8 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-
-
-import {Category} from "../../shared/entities/category";
 import {CategoriesService} from "../../api/services/categories.service";
 
 @Component({
@@ -12,7 +9,7 @@ import {CategoriesService} from "../../api/services/categories.service";
 })
 export class CreateAdvComponent implements OnInit {
 
-  categoryList: Category[] = [];
+  //categoryList: Category[] = [];
 
   createAdvForm: FormGroup = new FormGroup({
     category: new FormControl('', [Validators.required]),
@@ -28,7 +25,7 @@ export class CreateAdvComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.categoryService.getCategoriesList().subscribe((data: Category[]) => (this.categoryList = data))
+    /*this.categoryService.getCategoriesList().subscribe((data: Category[]) => (this.categoryList = data))*/
   }
 
 

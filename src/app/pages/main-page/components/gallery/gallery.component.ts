@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Advert} from "../../../../shared/entities/advert";
+
 import {AdvertService} from "../../../../api/services/advert.service";
 import {ShortAdvertDto} from "../../../../api/models/short-advert-dto";
 

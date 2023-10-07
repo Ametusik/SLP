@@ -4,14 +4,9 @@
     <h2>
       Новое объявление
     </h2>
-    <ng-form [formGroup]="createAdvForm">
+    <form [formGroup]="createAdvForm">
       <p>Выберите категорию</p>
-      <select formControlName="category">
-        <option selected disabled>Нажмите, чтобы выбрать</option>
-        <option *ngFor="let category of categoryList">
-          {{category.name}}
-        </option>
-      </select>
+
       <p>Название объявления</p>
       <input type="text" placeholder="Что хотите продать?" formControlName="name">
       <p>Описание</p>
@@ -24,6 +19,6 @@
       <input type="file" formControlName="img">
       <p>Цена</p>
       <input type="number" placeholder="0 $" formControlName="cost">
-    </ng-form>
+    </form>
   </div>
 </div>

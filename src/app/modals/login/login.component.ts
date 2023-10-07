@@ -1,8 +1,11 @@
-import {Component, EventEmitter, Output} from '@angular/core';
+import {Component} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {AuthService} from "../../shared/services/auth.service";
+import {LoginUserDto} from "../../api/models/login-user-dto";
 import {StorageService} from "../../shared/services/storage.service";
 import {PrimeIcons} from "primeng/api";
+import {AuthorizationService} from "../../api/services/authorization.service";
+import {Router} from "@angular/router";
+
 
 @Component({
   selector: 'app-login',
@@ -12,29 +15,32 @@ import {PrimeIcons} from "primeng/api";
 export class LoginComponent {
 
   visibleModal: boolean = false;
-  canShowAlerts:boolean = false;
+  canShowAlerts: boolean = false;
 
   authForm: FormGroup = new FormGroup({
-    login: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required),
+    loginControl: new FormControl('', Validators.required),
+    passwordControl: new FormControl('', Validators.required),
   });
 
 
-  constructor(private authService: AuthService, private storageService: StorageService) {
+  constructor(private authService: AuthorizationService, private storageService: StorageService, private router: Router) {
   }
 
 
   login(): void {
-    let user = this.authForm.getRawValue()
-    this.authService.login(user.login, user.password).subscribe({
+    let userLogin: string = this.authForm.get('loginControl').value;
+    let userPassword: string = this.authForm.get('passwordControl').value;
+    let user: LoginUserDto = {login: userLogin, password: userPassword}
+    this.authService.authLoginPost({body: user}).subscribe({
       next: data => {
         this.storageService.saveUser(data);
+        this.router.navigate(['']);
         window.location.reload();
       },
     })
   }
 
-  showModal() {
+  showModal(): void {
     this.visibleModal = true;
   }
 

@@ -9,7 +9,6 @@ import {CreateAdvComponent} from './pages/create-adv/create-adv.component';
 import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {RusFormatDate} from './shared/pipes/rusFormatDate';
 import {ApiModule} from "./api/api.module";
 
 @NgModule({
@@ -17,7 +16,6 @@ import {ApiModule} from "./api/api.module";
     AppComponent,
     MainPageComponent,
     CreateAdvComponent,
-    RusFormatDate
   ],
   imports: [
     BrowserModule,
