@@ -17,7 +17,6 @@ export class CardComponent implements OnInit {
 
   ngOnInit() {
     this.imageUrl = this.imageUrl.concat(this.advert.imagesIds[0]);
-    console.log(this.imageUrl);
   }
 
 }

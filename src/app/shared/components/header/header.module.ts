@@ -13,6 +13,8 @@ import {RouterLink, RouterOutlet} from "@angular/router";
 import {ButtonModule} from "primeng/button";
 import {LoginModule} from "../../../modals/login/login.module";
 import {RegistrationModule} from "../../../modals/registration/registration.module";
+import { LoginButtonComponent } from './components/user-menu/components/login-button/login-button.component';
+import { AddAdvButtonComponent } from './components/user-menu/components/add-adv-button/add-adv-button.component';
 
 
 
@@ -22,7 +24,9 @@ import {RegistrationModule} from "../../../modals/registration/registration.modu
     UserMenuComponent,
     SearchPanelComponent,
     CategoriesListComponent,
-    SearchInputComponent
+    SearchInputComponent,
+    LoginButtonComponent,
+    AddAdvButtonComponent
   ],
   exports: [
     HeaderComponent

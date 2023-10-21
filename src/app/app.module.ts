@@ -10,6 +10,7 @@ import {RouterOutlet} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {ApiModule} from "./api/api.module";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {ApiModule} from "./api/api.module";
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    ApiModule.forRoot({rootUrl: 'http://194.87.237.48:5000'})
+    ApiModule.forRoot({rootUrl: 'http://194.87.237.48:5000'}),
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
