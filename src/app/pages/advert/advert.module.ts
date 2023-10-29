@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdvertComponent } from './advert.component';
+import {HeaderModule} from "../../shared/components/header/header.module";
 
 
 
@@ -8,8 +9,9 @@ import { AdvertComponent } from './advert.component';
   declarations: [
     AdvertComponent
   ],
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+        HeaderModule
+    ]
 })
 export class AdvertModule { }

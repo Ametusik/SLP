@@ -11,9 +11,6 @@ import { CategoriesListComponent } from './components/search-panel/components/ca
 import { SearchInputComponent } from './components/search-panel/components/search-input/search-input.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {ButtonModule} from "primeng/button";
-import {LoginModule} from "../../../modals/login/login.module";
-import {RegistrationModule} from "../../../modals/registration/registration.module";
-import { LoginButtonComponent } from './components/user-menu/components/login-button/login-button.component';
 import { AddAdvButtonComponent } from './components/user-menu/components/add-adv-button/add-adv-button.component';
 
 
@@ -25,7 +22,6 @@ import { AddAdvButtonComponent } from './components/user-menu/components/add-adv
     SearchPanelComponent,
     CategoriesListComponent,
     SearchInputComponent,
-    LoginButtonComponent,
     AddAdvButtonComponent
   ],
   exports: [
@@ -40,8 +36,6 @@ import { AddAdvButtonComponent } from './components/user-menu/components/add-adv
     RouterLink,
     RouterOutlet,
     ButtonModule,
-    LoginModule,
-    RegistrationModule
   ]
 })
 export class HeaderModule { }
