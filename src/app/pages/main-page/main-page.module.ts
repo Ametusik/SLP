@@ -9,6 +9,7 @@ import {MainPageComponent} from "./main-page.component";
 
 @NgModule({
   declarations: [
+    MainPageComponent,
     GalleryComponent,
     CardComponent,
     MainPageComponent
