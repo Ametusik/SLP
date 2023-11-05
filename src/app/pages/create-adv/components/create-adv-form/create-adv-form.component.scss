@@ -1,0 +1,31 @@
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  width: 1296px;
+  gap: 24px;
+
+  ng-form, form {
+    display: flex;
+    flex-direction:column;
+
+    p{
+      margin-top:16px;
+    };
+    select, input {
+      height: 48px;
+      border: solid 1px #CBD5E1;
+      border-radius: 4px;
+    }
+
+    select {
+      max-width: 418px;
+      width: 100%
+    }
+
+    input {
+      max-width: 856px;
+      width: 100%
+    }
+  }
+
+}

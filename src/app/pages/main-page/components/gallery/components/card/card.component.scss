@@ -10,11 +10,17 @@
     border-radius: 4px;
   }
 
+  a,p{
+    max-width:306px;
+  }
+
   .advert__name, .advert__price {
     font-size: 18px;
     font-weight: 600;
 
   }
+
+
 
   .advert__price {
     color: #1E293B;

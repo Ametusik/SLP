@@ -17,6 +17,14 @@ p{
   color:#1E293B;
 }
 
+.container{
+  max-width:1296px;
+  width:100%
+}
+image{
+  border-radius:4px;
+}
+
 
 
 
