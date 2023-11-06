@@ -7,7 +7,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {UserMenuComponent} from './components/user-menu/user-menu.component';
 import {SearchPanelComponent} from './components/search-panel/search-panel.component';
-import {CategoriesListComponent} from './components/search-panel/components/categories-list/categories-list.component';
+import {CategoriesButtonComponent} from './components/search-panel/components/categories-list/categories-button.component';
 import {SearchInputComponent} from './components/search-panel/components/search-input/search-input.component';
 import {RouterLink, RouterOutlet} from "@angular/router";
 import {ButtonModule} from "primeng/button";
@@ -22,23 +22,24 @@ import {DropdownModule} from "primeng/dropdown";
     HeaderComponent,
     UserMenuComponent,
     SearchPanelComponent,
-    CategoriesListComponent,
+    CategoriesButtonComponent,
     SearchInputComponent,
     LoginButtonComponent,
     AddAdvButtonComponent
   ],
-    imports: [
-        CommonModule,
-        BrowserAnimationsModule,
-        CascadeSelectModule,
-        HttpClientModule,
-        FormsModule,
-        RouterLink,
-        RouterOutlet,
-        ButtonModule,
-        DialogModule,
-        DropdownModule,
-    ],
+  imports: [
+    CommonModule,
+    BrowserAnimationsModule,
+    CascadeSelectModule,
+    HttpClientModule,
+    FormsModule,
+    RouterLink,
+    RouterOutlet,
+    ButtonModule,
+    DialogModule,
+    DropdownModule,
+    ReactiveFormsModule,
+  ],
   exports:[
     HeaderComponent
   ]

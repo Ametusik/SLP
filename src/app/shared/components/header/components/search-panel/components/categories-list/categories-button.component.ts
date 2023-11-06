@@ -4,10 +4,10 @@ import {ShortCategoryDto} from "../../../../../../../api/models/short-category-d
 
 @Component({
   selector: 'app-categories-list',
-  templateUrl: './categories-list.component.html',
-  styleUrls: ['./categories-list.component.scss']
+  templateUrl: './categories-button.component.html',
+  styleUrls: ['./categories-button.component.scss']
 })
-export class CategoriesListComponent implements OnInit {
+export class CategoriesButtonComponent implements OnInit {
 
   categoriesList: ShortCategoryDto[] = [];
   selectedCategory: string = null;
